@@ -1,9 +1,11 @@
-// import Input from "./components/Input";
+import { useRef } from "react";
+import Input from "./components/Input";
 
-import Container from "./components/Contatiner";
-import Button from "./components/Button";
+// import Container from "./components/Contatiner";
+// import Button from "./components/Button";
 
 function App() {
+  const inputRef = useRef<HTMLInputElement>(null);
   return (
     <main>
       {/* <Input label="Your name" id="name" />
@@ -14,7 +16,9 @@ function App() {
       <p>
         <Button href="https://google.com">Link</Button>
       </p> */}
-      <Container as={Button}>Click Me!</Container>
+      {/* <Container as={Button}>Click Me!</Container> */}
+
+      <Input id="test" label="Test" ref={inputRef}></Input>
     </main>
   );
 }
